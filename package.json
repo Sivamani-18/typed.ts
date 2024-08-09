@@ -1,6 +1,6 @@
 {
   "name": "react-typed.ts",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "description": "A lightweight React component for creating a typing effect similar to Typewriter, without any external dependencies.",
   "main": "dist/bundle.js",

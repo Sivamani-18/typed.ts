@@ -4,6 +4,7 @@ import { TypedOptions } from './defaults';
 
 export const TypingEffect: React.FC<TypedOptions> = ({
   strings,
+  className,
   typeSpeed = 50,
   backSpeed = 30,
   loop = true,
@@ -40,6 +41,7 @@ export const TypingEffect: React.FC<TypedOptions> = ({
     if (typedRef.current) {
       const typed = new Typed(typedRef.current, {
         strings,
+        className,
         typeSpeed,
         startDelay,
         backSpeed,
@@ -76,6 +78,7 @@ export const TypingEffect: React.FC<TypedOptions> = ({
     }
   }, [
     strings,
+    className,
     typeSpeed,
     startDelay,
     backSpeed,
@@ -106,7 +109,12 @@ export const TypingEffect: React.FC<TypedOptions> = ({
     onDestroy,
   ]);
 
-  return <span ref={typedRef} />;
+  return (
+    <span
+      className={`typing-effect ${className ? className : ''}`}
+      ref={typedRef}
+    />
+  );
 };
 
 export default TypingEffect;

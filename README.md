@@ -119,6 +119,108 @@ You can use the component multiple times within your application, passing differ
 />
 ```
 
+### Here are some different effects you can achieve:
+
+It looks like the syntax in the provided examples has some errors, particularly with the use of colons instead of equal signs in JSX. Here's the corrected version:
+
+### 1. **Different Typing Speed:**
+
+```tsx
+<TypingEffect
+  strings={["Fast typing", "Slow typing"]}
+  typeSpeed={100}   // Typing speed
+  backSpeed={50}    // Backspacing speed
+  loop={true}
+/>
+```
+
+### 2. **Fade Out Effect:**
+
+```tsx
+<TypingEffect
+  strings={["This will fade out", "And then this text will appear"]}
+  typeSpeed={50}
+  backSpeed={25}
+  fadeOut={true}
+  loop={true}
+/>
+```
+
+### 3. **Show Cursor or Hide Cursor:**
+
+```tsx
+<TypingEffect
+  strings={["No cursor", "Cursor visible"]}
+  typeSpeed={50}
+  showCursor={false}   // Hides the cursor
+  loop={true}
+/>
+```
+
+### 4. **Smart Backspacing:**
+
+```tsx
+<TypingEffect
+  strings={["Backspacing only mismatched text", "Smart backspacing at work"]}
+  typeSpeed={50}
+  backSpeed={50}
+  smartBackspace={true}  // Only backspace the part of the string that doesn't match
+  loop={true}
+/>
+```
+
+### 5. **Shuffle Strings:**
+
+```tsx
+<TypingEffect
+  strings={["Shuffled string 1", "Shuffled string 2", "Shuffled string 3"]}
+  typeSpeed={50}
+  shuffle={true}  // Randomize the order of strings
+  loop={true}
+/>
+```
+
+### 6. **Custom Cursor Character:**
+
+```tsx
+<TypingEffect
+  strings={["Custom cursor character"]}
+  typeSpeed={50}
+  cursorChar={'_'}  // Change the cursor character
+  loop={true}
+/>
+```
+
+### 7. **Typing Text with a Delay:**
+
+```tsx
+<TypingEffect
+  strings={["Delayed start typing"]}
+  typeSpeed={50}
+  startDelay={1000}   // Delay before typing starts
+  backDelay={1000}    // Delay before backspacing starts
+  loop={true}
+/>
+```
+
+### Example Combining Multiple Effects:
+
+```tsx
+<TypingEffect
+  strings={["Typing fast!", "Then typing slow...", "And finally fading out!"]}
+  typeSpeed={100}
+  backSpeed={50}
+  startDelay={500}
+  backDelay={700}
+  fadeOut={true}
+  smartBackspace={true}
+  shuffle={true}
+  cursorChar={'|'}
+  loop={true}
+/>
+```
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

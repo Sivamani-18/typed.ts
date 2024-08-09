@@ -1,5 +1,6 @@
 export interface TypedOptions {
   strings: string[];
+  className?: string;
   stringsElement?: string | null;
   typeSpeed?: number;
   startDelay?: number;
