@@ -121,8 +121,6 @@ You can use the component multiple times within your application, passing differ
 
 ### Here are some different effects you can achieve:
 
-It looks like the syntax in the provided examples has some errors, particularly with the use of colons instead of equal signs in JSX. Here's the corrected version:
-
 ### 1. **Different Typing Speed:**
 
 ```tsx
