@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 export interface CustomTypedProps {
   strings: string[];
@@ -11,7 +11,7 @@ export interface CustomTypedProps {
   cursorChar?: string;
 }
 
-export const CustomTyped: React.FC<CustomTypedProps> = ({
+export const Typed: React.FC<CustomTypedProps> = ({
   strings,
   typeSpeed = 50,
   startDelay = 0,
@@ -19,9 +19,9 @@ export const CustomTyped: React.FC<CustomTypedProps> = ({
   loop = true,
   loopCount = Infinity,
   className,
-  cursorChar = "|",
+  cursorChar = '|',
 }) => {
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState('');
   const [currentStringIndex, setCurrentStringIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const loopCounter = useRef(0);
@@ -42,13 +42,13 @@ export const CustomTyped: React.FC<CustomTypedProps> = ({
         if (loop && loopCounter.current < loopCount) {
           setTimeout(() => setIsDeleting(true), delay);
         }
-      } else if (isDeleting && updatedText === "") {
+      } else if (isDeleting && updatedText === '') {
         setIsDeleting(false);
         setCurrentStringIndex((prevIndex) => (prevIndex + 1) % strings.length);
         loopCounter.current++;
       }
 
-      if (loop && loopCounter.current >= loopCount && updatedText === "") {
+      if (loop && loopCounter.current >= loopCount && updatedText === '') {
         return;
       }
 
@@ -58,7 +58,17 @@ export const CustomTyped: React.FC<CustomTypedProps> = ({
     const timeoutId = setTimeout(handleTyping, startDelay);
 
     return () => clearTimeout(timeoutId);
-  }, [currentText, isDeleting, strings, typeSpeed, startDelay, backSpeed, loop, loopCount, currentStringIndex]);
+  }, [
+    currentText,
+    isDeleting,
+    strings,
+    typeSpeed,
+    startDelay,
+    backSpeed,
+    loop,
+    loopCount,
+    currentStringIndex,
+  ]);
 
   return (
     <span className={className}>
@@ -67,3 +77,6 @@ export const CustomTyped: React.FC<CustomTypedProps> = ({
     </span>
   );
 };
+
+// Ensure default export
+export default Typed;

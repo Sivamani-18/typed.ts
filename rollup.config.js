@@ -5,15 +5,16 @@ import { terser } from 'rollup-plugin-terser'; // Minify the output code
 import typescript from 'rollup-plugin-typescript2'; // Import the TypeScript plugin
 
 export default {
-  input: 'src/index.tsx', // Entry point of your library (adjust the path accordingly)
+  input: 'src/index.tsx',
   output: {
     file: 'dist/bundle.js',
     format: 'umd',
-    name: 'Reac Typed.ts',
+    name: 'ReactTyped',
     sourcemap: true,
+    exports: 'named',
     globals: {
-      react: 'React', // Specify the global variable name for 'react'
-      'react-dom': 'ReactDOM', // Specify the global variable name for 'react-dom'
+      react: 'React',
+      'react-dom': 'ReactDOM',
     },
   },
   plugins: [
@@ -26,5 +27,5 @@ export default {
     }),
     terser(),
   ],
-  external: ['react', 'react-dom'], // Add external dependencies here (if any)
+  external: ['react', 'react-dom'],
 };
