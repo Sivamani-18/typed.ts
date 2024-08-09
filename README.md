@@ -6,10 +6,11 @@ A lightweight React component for creating a typing effect similar to a typewrit
 
 ## Features
 
-- Fully customizable typing effect.
-- No external dependencies.
-- Written in TypeScript.
-- Supports looping, custom speeds, and more.
+- **Customizable Typing Speed**: Control how fast the text is typed and deleted.
+- **Looping**: Automatically loop through the provided strings.
+- **Custom Cursor**: Customize the cursor character and choose whether to display it.
+- **Lightweight**: Minimal dependencies, easy to integrate into any React project.
+
 
 ## Installation
 
@@ -25,22 +26,31 @@ Or with Yarn:
 yarn add react-typed.ts
 ```
 
+
 ## Usage
 
-Here's a basic example of how to use the `Typed` component:
+### 1. Import and Use the `TypingEffect` Component
+
+First, import the `TypingEffect` component and use it in your React project.
 
 ```tsx
-import React from "react";
-import Typed from "react-typed.ts";
+import React from 'react';
+import TypingEffect from 'react-typed.ts';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
-      <Typed
-        strings={["Hello, World!", "Welcome to my site!", "Enjoy your stay!"]}
-        typeSpeed={100}
+      <h1>Welcome to My Website</h1>
+      <TypingEffect
+        strings={[
+          'Hello, World!',
+          'This is a typing effect.',
+          'React is awesome!',
+          'Enjoy coding!',
+        ]}
+        typeSpeed={70}
         backSpeed={50}
-        loop
+        loop={true}
       />
     </div>
   );
@@ -49,20 +59,38 @@ const App = () => {
 export default App;
 ```
 
+### 2. Customization Options
 
-### Props
+The `TypingEffect` component accepts several props to customize the typing effect:
 
-| Prop Name      | Type                 | Description                                         | Default Value |
-|----------------|----------------------|-----------------------------------------------------|---------------|
-| `strings`      | `string[]`            | An array of strings to be typed.                    | -             |
-| `typeSpeed`    | `number`              | Speed of typing in milliseconds.                    | `50`          |
-| `startDelay`   | `number`              | Delay before typing starts in milliseconds.         | `0`           |
-| `backSpeed`    | `number`              | Speed of backspacing in milliseconds.               | `30`          |
-| `loop`         | `boolean`             | Whether to loop the strings.                        | `true`        |
-| `loopCount`    | `number`              | Number of loops.                                    | `Infinity`    |
-| `className`    | `string`              | Optional class name for styling.                    | -             |
-| `cursorChar`   | `string`              | Character for the cursor.                           | `|`           |
+| Prop Name   | Type       | Default | Description                                                  |
+|-------------|------------|---------|--------------------------------------------------------------|
+| `strings`   | `string[]` | `[]`    | An array of strings to be typed in sequence.                 |
+| `typeSpeed` | `number`   | `50`    | Speed of typing in milliseconds.                             |
+| `backSpeed` | `number`   | `30`    | Speed of backspacing in milliseconds.                        |
+| `loop`      | `boolean`  | `true`  | Whether to loop the strings.                                 |
+| `cursorChar`| `string`   | `|`     | Character for the cursor.                                    |
+| `showCursor`| `boolean`  | `true`  | Whether to show the cursor.                                  |
 
+### 3. Advanced Usage
+
+You can use the component multiple times within your application, passing different sets of strings or customization options to each instance.
+
+```tsx
+<TypingEffect
+  strings={['Typing effect example 1', 'React components are great!']}
+  typeSpeed={60}
+  backSpeed={40}
+  loop={true}
+/>
+
+<TypingEffect
+  strings={['Another example', 'With a different cursor']}
+  typeSpeed={80}
+  backSpeed={60}
+  cursorChar="_"
+/>
+```
 
 ## License
 
@@ -75,5 +103,10 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 ## Author
 
 Sivamani-18 - [GitHub Profile](https://github.com/Sivamani-18)
+
+
+
+
+
 
 
