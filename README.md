@@ -62,15 +62,42 @@ export default App;
 ### 2. Customization Options
 
 The `TypingEffect` component accepts several props to customize the typing effect:
+## Usage
 
-| Prop Name   | Type       | Default | Description                                                  |
-|-------------|------------|---------|--------------------------------------------------------------|
-| `strings`   | `string[]` | `[]`    | An array of strings to be typed in sequence.                 |
-| `typeSpeed` | `number`   | `50`    | Speed of typing in milliseconds.                             |
-| `backSpeed` | `number`   | `30`    | Speed of backspacing in milliseconds.                        |
-| `loop`      | `boolean`  | `true`  | Whether to loop the strings.                                 |
-| `cursorChar`| `string`   | `|`     | Character for the cursor.                                    |
-| `showCursor`| `boolean`  | `true`  | Whether to show the cursor.                                  |
+### Props
+
+| Prop Name             | Type                           | Default                  | Description                                                                 |
+|-----------------------|--------------------------------|--------------------------|-----------------------------------------------------------------------------|
+| `strings`             | `string[]`                     | `['Hello, World!', 'This is a typing effect.', 'React is awesome!', 'Enjoy coding!']` | An array of strings to be typed in sequence.                               |
+| `stringsElement`      | `string \| null`               | `null`                   | ID or instance of an HTML element containing string children.              |
+| `typeSpeed`           | `number`                       | `50`                     | Speed of typing in milliseconds.                                           |
+| `startDelay`          | `number`                       | `0`                      | Delay before typing starts in milliseconds.                                |
+| `backSpeed`           | `number`                       | `30`                     | Speed of backspacing in milliseconds.                                      |
+| `smartBackspace`      | `boolean`                      | `true`                   | Only backspace what doesn't match the previous string.                     |
+| `shuffle`             | `boolean`                      | `false`                  | Shuffle the strings randomly.                                              |
+| `backDelay`           | `number`                       | `700`                    | Time before backspacing in milliseconds.                                   |
+| `fadeOut`             | `boolean`                      | `false`                  | Fade out instead of backspace.                                             |
+| `fadeOutClass`        | `string`                       | `'typed-fade-out'`       | CSS class for fade animation.                                              |
+| `fadeOutDelay`        | `number`                       | `500`                    | Fade out delay in milliseconds.                                            |
+| `loop`                | `boolean`                      | `false`                  | Whether to loop the strings.                                               |
+| `loopCount`           | `number`                       | `Infinity`               | Number of loops before stopping.                                           |
+| `showCursor`          | `boolean`                      | `true`                   | Show the typing cursor.                                                    |
+| `cursorChar`          | `string`                       | `'|'`                    | Character for the cursor.                                                  |
+| `autoInsertCss`       | `boolean`                      | `true`                   | Insert CSS for cursor and fadeOut into HTML.                               |
+| `attr`                | `string \| null`               | `null`                   | Attribute to type into (e.g., `input` placeholder, `value`, or just HTML text). |
+| `bindInputFocusEvents`| `boolean`                      | `false`                  | Bind to focus and blur if the element is a text input.                     |
+| `contentType`         | `'html' \| 'null'`             | `'html'`                 | Type of content to display: HTML or plaintext.                             |
+| `onBegin`             | `(self: any) => void`          | `() => {}`               | Callback before typing begins.                                             |
+| `onComplete`          | `(self: any) => void`          | `() => {}`               | Callback when typing is complete.                                          |
+| `preStringTyped`      | `(arrayPos: number, self: any) => void` | `() => {}`      | Callback before each string is typed.                                      |
+| `onStringTyped`       | `(arrayPos: number, self: any) => void` | `() => {}`      | Callback after each string is typed.                                       |
+| `onLastStringBackspaced` | `(self: any) => void`       | `() => {}`               | Callback during looping, after the last string is backspaced.              |
+| `onTypingPaused`      | `(arrayPos: number, self: any) => void` | `() => {}`      | Callback when typing is paused.                                            |
+| `onTypingResumed`     | `(arrayPos: number, self: any) => void` | `() => {}`      | Callback when typing is resumed after being paused.                        |
+| `onReset`             | `(self: any) => void`          | `() => {}`               | Callback after the typing effect is reset.                                 |
+| `onStop`              | `(arrayPos: number, self: any) => void` | `() => {}`      | Callback after the typing effect is stopped.                               |
+| `onStart`             | `(arrayPos: number, self: any) => void` | `() => {}`      | Callback after the typing effect is started.                               |
+| `onDestroy`           | `(self: any) => void`          | `() => {}`               | Callback after the typing effect is destroyed.                             |
 
 ### 3. Advanced Usage
 
@@ -103,10 +130,3 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 ## Author
 
 Sivamani-18 - [GitHub Profile](https://github.com/Sivamani-18)
-
-
-
-
-
-
-
