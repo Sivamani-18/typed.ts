@@ -1,22 +1,38 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from './typed';
+import { TypedOptions } from './defaults';
 
-interface TypingEffectProps {
-  strings: string[];
-  typeSpeed?: number;
-  backSpeed?: number;
-  loop?: boolean;
-  cursorChar?: string;
-  showCursor?: boolean;
-}
-
-export const TypingEffect: React.FC<TypingEffectProps> = ({
+export const TypingEffect: React.FC<TypedOptions> = ({
   strings,
   typeSpeed = 50,
   backSpeed = 30,
   loop = true,
   cursorChar = '|',
   showCursor = true,
+  stringsElement = null,
+  startDelay = 0,
+  smartBackspace = true,
+  shuffle = false,
+  backDelay = 700,
+  fadeOut = false,
+  fadeOutClass = 'typed-fade-out',
+  fadeOutDelay = 500,
+  loopCount = Infinity,
+  autoInsertCss = true,
+  attr = null,
+  bindInputFocusEvents = false,
+  contentType = 'html',
+  onBegin = () => {},
+  onComplete = () => {},
+  preStringTyped = () => {},
+  onStringTyped = () => {},
+  onLastStringBackspaced = () => {},
+  onTypingPaused = () => {},
+  onTypingResumed = () => {},
+  onReset = () => {},
+  onStop = () => {},
+  onStart = () => {},
+  onDestroy = () => {},
 }) => {
   const typedRef = useRef<HTMLDivElement>(null);
 
@@ -25,17 +41,70 @@ export const TypingEffect: React.FC<TypingEffectProps> = ({
       const typed = new Typed(typedRef.current, {
         strings,
         typeSpeed,
+        startDelay,
         backSpeed,
+        smartBackspace,
+        shuffle,
+        backDelay,
+        fadeOut,
+        fadeOutClass,
+        fadeOutDelay,
         loop,
-        cursorChar,
+        loopCount,
         showCursor,
+        cursorChar,
+        autoInsertCss,
+        attr,
+        bindInputFocusEvents,
+        contentType,
+        onBegin,
+        onComplete,
+        preStringTyped,
+        onStringTyped,
+        onLastStringBackspaced,
+        onTypingPaused,
+        onTypingResumed,
+        onReset,
+        onStop,
+        onStart,
+        onDestroy,
       });
 
       return () => {
         typed.destroy();
       };
     }
-  }, [strings, typeSpeed, backSpeed, loop, cursorChar, showCursor]);
+  }, [
+    strings,
+    typeSpeed,
+    startDelay,
+    backSpeed,
+    smartBackspace,
+    shuffle,
+    backDelay,
+    fadeOut,
+    fadeOutClass,
+    fadeOutDelay,
+    loop,
+    loopCount,
+    showCursor,
+    cursorChar,
+    autoInsertCss,
+    attr,
+    bindInputFocusEvents,
+    contentType,
+    onBegin,
+    onComplete,
+    preStringTyped,
+    onStringTyped,
+    onLastStringBackspaced,
+    onTypingPaused,
+    onTypingResumed,
+    onReset,
+    onStop,
+    onStart,
+    onDestroy,
+  ]);
 
   return <span ref={typedRef} />;
 };

@@ -33,10 +33,10 @@ export interface TypedOptions {
 
 export const defaults: TypedOptions = {
   strings: [
-    'These are the default values...',
-    'You know what you should do?',
-    'Use your own!',
-    'Have a great day!',
+    'Hello, World!',
+    'This is a typing effect.',
+    'React is awesome!',
+    'Enjoy coding!',
   ],
   stringsElement: null,
   typeSpeed: 50,
