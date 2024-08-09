@@ -1,5 +1,5 @@
 {
-  "name": "reac-typed.ts",
+  "name": "react-typed.ts",
   "version": "1.0.1",
   "private": false,
   "description": "A lightweight React component for creating a typing effect similar to Typewriter, without any external dependencies.",
