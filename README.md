@@ -1,6 +1,6 @@
 # React Typing Effect
 
-[![npm version](https://badge.fury.io/js/reac-typed.ts.svg)](https://badge.fury.io/js/reac-typed.ts)
+[![npm version](https://badge.fury.io/js/react-typed.ts.svg)](https://badge.fury.io/js/react-typed.ts)
 
 A lightweight React component for creating a typing effect similar to a typewriter, without any external dependencies.
 
@@ -16,13 +16,13 @@ A lightweight React component for creating a typing effect similar to a typewrit
 Install the package via npm:
 
 ```bash
-npm install reac-typed.ts
+npm install react-typed.ts
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add reac-typed.ts
+yarn add react-typed.ts
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ Here's a basic example of how to use the `Typed` component:
 
 ```tsx
 import React from "react";
-import { Typed } from "reac-typed.ts";
+import Typed from "react-typed.ts";
 
 const App = () => {
   return (
