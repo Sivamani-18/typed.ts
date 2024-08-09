@@ -1,0 +1,13 @@
+# Ignore directories
+node_modules/
+dist/
+
+# Ignore files
+.DS_Store
+.env
+
+# Ignore build artifacts
+*.js.map
+
+# Ignore TypeScript cache
+*.tsbuildinfo
