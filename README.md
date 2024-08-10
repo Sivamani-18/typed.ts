@@ -1,6 +1,9 @@
 # React Typing Effect
 
-[![npm version](https://badge.fury.io/js/react-typed.ts.svg)](https://badge.fury.io/js/react-typed.ts)
+[![npm version](https://img.shields.io/npm/v/react-typed.ts.svg?style=flat)](https://www.npmjs.com/package/react-typed.ts)
+[![npm downloads](https://img.shields.io/npm/dt/react-typed.ts.svg?style=flat)](https://www.npmjs.com/package/react-typed.ts)
+
+
 
 A lightweight React component for creating a typing effect similar to a typewriter, without any external dependencies.
 
