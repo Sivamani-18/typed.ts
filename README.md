@@ -7,8 +7,6 @@ A lightweight React component for creating a typing effect similar to a typewrit
 ![typed](https://github.com/user-attachments/assets/7baaaaae-2f23-4091-91bd-a3d2919abde4)
 
 
-
-
 ## Features
 
 - **Customizable Typing Speed**: Control how fast the text is typed and deleted.
