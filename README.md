@@ -4,6 +4,11 @@
 [![npm downloads](https://img.shields.io/npm/dt/react-typed.ts.svg?style=flat)](https://www.npmjs.com/package/react-typed.ts)
 [![npm license](https://img.shields.io/npm/l/react-typed.ts.svg?style=flat)](https://www.npmjs.com/package/react-typed.ts)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/react-typed.ts.svg)](https://www.npmjs.com/package/react-typed.ts)
+[![GitHub stars](https://img.shields.io/github/stars/Sivamani-18/typed.ts.svg?style=social)](https://github.com/Sivamani-18/typed.ts/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Sivamani-18/typed.ts.svg?style=social)](https://github.com/Sivamani-18/typed.ts/network/members)
+
+
+
 
 A lightweight React component for creating a typing effect similar to a typewriter, without any external dependencies.
 
