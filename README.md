@@ -4,7 +4,8 @@
 
 A lightweight React component for creating a typing effect similar to a typewriter, without any external dependencies.
 
-[screencast-localhost_3000-2024.08.10-16_35_52.webm](https://github.com/user-attachments/assets/9016411b-01d2-435c-b94e-40650d8177f4)
+![typed](https://github.com/user-attachments/assets/7baaaaae-2f23-4091-91bd-a3d2919abde4)
+
 
 
 
